@@ -1,0 +1,16 @@
+#divColor {
+    width: 400px;
+    height: 100px;
+    background-color: red;
+}
+
+#divColorYellow {
+    width: 400px;
+    height: 100px;
+    background-color: yellow;
+}
+
+#countNumber {
+    font-size: 100px;
+    color: antiquewhite;
+}
