@@ -1,21 +1,23 @@
 console.log('test JS');
 
 $(document).ready(readyNow);
+$(document).on('click', '.swap', swap);
+$(document).on('click', '.delete', deleteDiv);
 
 function readyNow() {
     console.log('JQ ready');
 
-$('#addButton').on('click', buttonAdd);
-
+$('.addButton').on('click', buttonAdd);
+swap();
+deleteDiv();
 }/////end ready now
 
 let counter = 0;
 
 function buttonAdd() {
     console.log('in buttonAdd');
-    $('#goHere').append('<div id="divColor"><p>' + (counter + 1) + '</p></div>')
+    $('#goHere').append('<div class="divColor"><p>' + (counter + 1) + '</p>' + '<p><button type="button" class="swap">swap</button>' + '<button type="button" class="delete">delete</button> </div>');
     count();
-    swap();
     deleteDiv();
 } // end buttonAdd function
 
@@ -27,11 +29,13 @@ function count() {
 
 function swap() {
     console.log('in Swap');
-    $('#goHere').append('<button type="button" id="swap">swap</button>')
+    // $("#swap").click(function () {
+    // $('#swap').on('click', function() {
+    $('.divColor').toggleClass("divColorYellow");
 } // end swap function
 
 function deleteDiv() {
     console.log('in delete');
-    $('#goHere').append('<button type="button" id="delete">delete</button>')
+    $(this).closest("div").remove();
 }// end delete function
 

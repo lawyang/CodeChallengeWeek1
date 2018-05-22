@@ -1,10 +1,10 @@
-#divColor {
+.divColor {
     width: 400px;
     height: 100px;
     background-color: red;
 }
 
-#divColorYellow {
+.divColorYellow {
     width: 400px;
     height: 100px;
     background-color: yellow;
